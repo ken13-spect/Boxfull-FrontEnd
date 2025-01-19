@@ -3,7 +3,7 @@ import React from "react";
 import { Button, Form, Input, Flex } from "antd";
 import { Login } from "../auth.api";
 import Link from "next/link";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
+import { LockOutlined, MailOutlined } from "@ant-design/icons";
 
 const onFinish = async (values) => {
   const { password, email } = values;
@@ -25,6 +25,7 @@ export default function LoginForm() {
         maxWidth: 360,
       }}
       onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
     >
       <Form.Item
         name="email"
@@ -35,7 +36,7 @@ export default function LoginForm() {
           },
         ]}
       >
-        <Input prefix={<UserOutlined />} placeholder="Username" />
+        <Input prefix={<MailOutlined />} placeholder="Email" />
       </Form.Item>
       <Form.Item
         name="password"
@@ -46,7 +47,7 @@ export default function LoginForm() {
           },
         ]}
       >
-        <Input
+        <Input.Password
           prefix={<LockOutlined />}
           type="password"
           placeholder="Password"

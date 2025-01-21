@@ -23,3 +23,10 @@ This project uses a backend service hosted on [Boxfull-Api](https://github.com/k
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Available routes
+The routes currently available in the project are the following:
+- http://localhost:3000/auth/login
+- http://localhost:3000/auth/register
+  
+Check the status of the request in the console.
+
